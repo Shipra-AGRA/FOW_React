@@ -13,22 +13,38 @@ const Body = () => {
     const fetchData=async()=>{
         const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.57590&lng=77.33450&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
         const json=await data.json()
-        setListOfRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+        const restroData=json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+        setListOfRestaurant(restroData)
+        setFilteredRestaurant(restroData)
     }
 
     const [ListOfRestaurant,setListOfRestaurant]=useState([])
+    const [searchText,setSearchText]=useState("")
+    const [filteredRestaurant,setFilteredRestaurant]=useState([])
 
     return ListOfRestaurant.length===0?<Shimmer/>:(
         <div className='body'>
             <div className='filter'>
+                <div className="search">
+                    <input type="text" className="search-box"
+                    onChange={(e)=>{setSearchText(e.target.value)}} 
+                    value={searchText}
+                    />
+                    <button onClick={()=>{
+                        const filteredRestro=ListOfRestaurant.filter((res)=>
+                        res.info.name.toLowerCase().includes(searchText.toLowerCase())
+                    )
+                    setFilteredRestaurant(filteredRestro)
+                    }}>Search</button>
+                </div>
                 <button className="filter-btn" onClick={()=>{
                     const filteredList=ListOfRestaurant.filter((res)=>res.info.avgRating>4.3)
-                    setListOfRestaurant(filteredList)
+                    setFilteredRestaurant(filteredList)
                 }}>Top Rated Restaurant</button>
             </div>
             <div className='res-container'>
                 {
-                    ListOfRestaurant.map((restaurant)=>(
+                    filteredRestaurant.map((restaurant)=>(
                         <RestaurantCard resData={restaurant} key={restaurant.info.id}/>
                     ))
                 }

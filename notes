@@ -44,3 +44,9 @@ ex- 1234-/
 -shimmer UI-> resembles the actual page UI until UI does not loads.
 
 -rendering based on condition known as conditinal rendering.
+
+-when state changes, react re-renders that whole component. ex-in case of header component react re-renders whole header component.
+
+-We declare useState variables as constants, yet we can still update the state. This is because when we update the state, the component re-renders, creating a new variable with the updated value.
+
+-react is faster bcz of react fibre, the new reconciliation algorithm that find out the diff b/w two virtual DOM's and updates the portion wherever required only.
