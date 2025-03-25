@@ -20,3 +20,7 @@
 -two types of export -> named export and default export
 
 -whenver a state variable updates, react re-renders the component
+
+-react uses reconciliation algorithm(also known as react fiber algo). it is the way of find the diff and updating the DOM.
+
+-virtual DOM is the visual representation of actual DOM.
