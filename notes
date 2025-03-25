@@ -19,8 +19,14 @@
 
 -two types of export -> named export and default export
 
--whenver a state variable updates, react re-renders the component
+-whenever a state variable updates, react re-renders the component
 
 -react uses reconciliation algorithm(also known as react fiber algo). it is the way of find the diff and updating the DOM.
 
 -virtual DOM is the visual representation of actual DOM.
+
+-separation of concerns or single responsibility principle where each service has its own job no one is interfering each other, this is known as microservice architecture and here each service can be written in different languages.
+all the services are deployed on different ports and all these ports can be mapped to domain name. so for making call to different service, need to make call to different url's.
+ex- 1234-/ 
+    1000-/api
+    2000-/sms
