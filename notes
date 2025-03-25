@@ -18,3 +18,5 @@
 -config driven UI- when our website is driven by data i.e controlling the UI using data(config) and this config from backend.
 
 -two types of export -> named export and default export
+
+-whenver a state variable updates, react re-renders the component
