@@ -1,3 +1,4 @@
+npm install parcel@2.13.3
 -components 
 1.header 
     -logo
@@ -41,3 +42,5 @@ ex- 1234-/
 -we cannot make call to swiggy's api due to CORS policy as swiggy blocked the localhost to make request to the api but we can do this by add a chrome extension "cors chrome extension".
 
 -shimmer UI-> resembles the actual page UI until UI does not loads.
+
+-rendering based on condition known as conditinal rendering.

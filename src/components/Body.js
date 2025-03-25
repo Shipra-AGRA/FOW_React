@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard"
 import resObj from "../utils/mockData"
 import React, { useEffect } from "react"
 import { useState } from "react"
+import Shimmer from "./Shimmer"
 
 const Body = () => {
 
@@ -16,11 +17,8 @@ const Body = () => {
     }
 
     const [ListOfRestaurant,setListOfRestaurant]=useState([])
-    if(ListOfRestaurant.length===0){
-        return <h1>Loading...</h1>
-    }
 
-    return (
+    return ListOfRestaurant.length===0?<Shimmer/>:(
         <div className='body'>
             <div className='filter'>
                 <button className="filter-btn" onClick={()=>{
