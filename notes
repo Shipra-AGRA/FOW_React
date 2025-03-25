@@ -30,3 +30,14 @@ all the services are deployed on different ports and all these ports can be mapp
 ex- 1234-/ 
     1000-/api
     2000-/sms
+
+-loads->api call->render on UI
+-loads->render UI->make api call->re-render UI  [always use this approach atleast we can see the skeleton]
+
+-useEffect Hook is called after the UI renders. when the component will load, it will render the component and when this render cycle is finish it will call the callback function passed in useEffect.
+
+-for debugging purpose go to inspect>sources>put a debugger.
+
+-we cannot make call to swiggy's api due to CORS policy as swiggy blocked the localhost to make request to the api but we can do this by add a chrome extension "cors chrome extension".
+
+-shimmer UI-> resembles the actual page UI until UI does not loads.
