@@ -1,4 +1,5 @@
 npm install parcel@2.13.3
+npm install react-router-dom@6.22.0 
 -components 
 1.header 
     -logo
@@ -50,3 +51,17 @@ ex- 1234-/
 -We declare useState variables as constants, yet we can still update the state. This is because when we update the state, the component re-renders, creating a new variable with the updated value.
 
 -react is faster bcz of react fibre, the new reconciliation algorithm that find out the diff b/w two virtual DOM's and updates the portion wherever required only.
+
+-useEffect
+    by deafult behaviour is to call on each render.
+    if dependency array is not there the useEffect will call everytime when component renders. 
+    if dependency array is empty then useEffect is called only on initial render(just once).
+    if there are some dependencies then useEffect will be called everytime when the dependencies updates.
+
+-useState is use to create local state variables inside functional component so it must be declared inside the component.
+
+-npm i react-router-dom -> react router DOM library
+configuration means information that will tell the browser router that what will happen on a specific path that we need to pass into our createBrowserRouter.
+import createBrowserRouter and RouterProvider in App.js
+createBrowserRouter will create the routing configuration.
+RouterProvider will provide the routing configuration to our app
