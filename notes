@@ -65,3 +65,5 @@ configuration means information that will tell the browser router that what will
 import createBrowserRouter and RouterProvider in App.js
 createBrowserRouter will create the routing configuration.
 RouterProvider will provide the routing configuration to our app
+in case when we want to stick the header and change the body everytime we will use children routes.
+Outlet is a component, whenver there is a change in the path, the outlet will be filled with the children according to the path on what page we are.

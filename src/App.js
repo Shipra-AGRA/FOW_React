@@ -16,7 +16,8 @@ const AppLayout = () => {
     )
 }
 
-const appRouter=createBrowserRouter([
+// header gone
+const appRouter1=createBrowserRouter([
     {
         path:"/",
         element:<AppLayout/>,
@@ -31,6 +32,8 @@ const appRouter=createBrowserRouter([
         element:<Contact/>
     }
 ])
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(<RouterProvider router={appRouter}/>)
+root.render(<RouterProvider router={appRouter1}/>)
 export default AppLayout
