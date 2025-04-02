@@ -69,3 +69,9 @@ in case when we want to stick the header and change the body everytime we will u
 Outlet is a component, whenver there is a change in the path, the outlet will be filled with the children according to the path on what page we are.
 
 -should not use anchor tag for navigation bcz in that case the whole page get refreshed till we moved to a new route. use Link Component.
+
+-there are 2 types of routing that we can have in our web applications- client side routing and server side routing.
+SSR- if i click on my /about route the whole page gets refreshed. it sends the network call to /about page fetches the html and render it on webpage.
+CSR- not making any network call while moving towards the page bcz the components are already loaded onto the app. that's why known as single page application bcz it's just single page, just the components getting intrechanged.
+
+-
