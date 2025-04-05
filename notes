@@ -77,3 +77,5 @@ CSR- not making any network call while moving towards the page bcz the component
 -graphql helps us with under fetching and over fetching of data.
 
 -behind the scenes Link tag uses anchor tag. when we use Link tag in our page in developer console it still shows anchor tag this is bcz internally converted to anchor tag by react router dom.
+
+-diff b/w CBC and FBC is fC is a function that returns some piece of JSX while CC have a render a render method that returns JSX.
