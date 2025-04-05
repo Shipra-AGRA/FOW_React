@@ -74,4 +74,4 @@ Outlet is a component, whenver there is a change in the path, the outlet will be
 SSR- if i click on my /about route the whole page gets refreshed. it sends the network call to /about page fetches the html and render it on webpage.
 CSR- not making any network call while moving towards the page bcz the components are already loaded onto the app. that's why known as single page application bcz it's just single page, just the components getting intrechanged.
 
--
+-graphql helps us with under fetching and over fetching of data.
