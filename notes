@@ -98,3 +98,6 @@ parent render
     child1 didmount
     child2 didmount
 parent didmount
+
+-react has 2 phases: render(called constructor then render),commit(called component did mount)
+for optimization purpose react batched the render phase of child components. in commit phase DOM manipulation occurs. DOM is the very expensive task so react tries to batch up the DOM manipulation phase so it will optimises the performance of our app.
