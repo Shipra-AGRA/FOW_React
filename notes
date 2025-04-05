@@ -75,3 +75,5 @@ SSR- if i click on my /about route the whole page gets refreshed. it sends the n
 CSR- not making any network call while moving towards the page bcz the components are already loaded onto the app. that's why known as single page application bcz it's just single page, just the components getting intrechanged.
 
 -graphql helps us with under fetching and over fetching of data.
+
+-behind the scenes Link tag uses anchor tag. when we use Link tag in our page in developer console it still shows anchor tag this is bcz internally converted to anchor tag by react router dom.
