@@ -4,8 +4,8 @@ const About=()=>{
 return(
     <div className="about">
         <h1>About Component</h1>
-        <User/>
-        <UserClass/>
+        <User name={"Shipra (function)"} location={"Noida"}/>
+        <UserClass name={"Shipra (class)"} location/>
     </div>
 )
 }

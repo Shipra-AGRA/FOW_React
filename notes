@@ -79,3 +79,9 @@ CSR- not making any network call while moving towards the page bcz the component
 -behind the scenes Link tag uses anchor tag. when we use Link tag in our page in developer console it still shows anchor tag this is bcz internally converted to anchor tag by react router dom.
 
 -diff b/w CBC and FBC is fC is a function that returns some piece of JSX while CC have a render a render method that returns JSX.
+
+-in case of FC, we pass the props and directly receive it but in case of CC, for receiving the props will use constructor.
+
+-when component loads first constructor is called then render method is called in case of CBC.
+
+-constrcutor->render->componentDidMount (so this is called when the component is already mounted on the DOM)
