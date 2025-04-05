@@ -84,4 +84,17 @@ CSR- not making any network call while moving towards the page bcz the component
 
 -when component loads first constructor is called then render method is called in case of CBC.
 
--constrcutor->render->componentDidMount (so this is called when the component is already mounted on the DOM)
+-constructor->render->componentDidMount (so this is called when the component is already mounted on the DOM)
+order: parent cons, parent render, child cons, child render, child mount, parenyt mount
+componentDidMount is use to make api calls.
+
+-In case of 1 parent and 2 child components
+parent cons
+parent render
+    child1 cons
+    child1 ren
+    child2 cons
+    child2 ren
+    child1 didmount
+    child2 didmount
+parent didmount
