@@ -82,10 +82,13 @@ CSR- not making any network call while moving towards the page bcz the component
 
 -in case of FC, we pass the props and directly receive it but in case of CC, for receiving the props will use constructor.
 
+-loading the CBC is creating the instance of a class and whenever this instance is created constructor called automatically and constructor is the best place to create state variables.
+this.setState is used for updating states in CBC.
+
 -when component loads first constructor is called then render method is called in case of CBC.
 
 -constructor->render->componentDidMount (so this is called when the component is already mounted on the DOM)
-order: parent cons, parent render, child cons, child render, child mount, parenyt mount
+order: parent cons, parent render, child cons, child render, child mount, parent mount
 componentDidMount is use to make api calls.
 
 -In case of 1 parent and 2 child components
