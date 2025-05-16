@@ -29,6 +29,7 @@ class About extends React.Component{
                     <UserClass name={"Hello (class)"} />
                 </div>
             )
+            //calling a class 2 times mean - creating 2 objs
     }
 }
 export default About

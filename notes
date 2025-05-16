@@ -85,7 +85,7 @@ CSR- not making any network call while moving towards the page bcz the component
 -loading the CBC is creating the instance of a class and whenever this instance is created constructor called automatically and constructor is the best place to create state variables.
 this.setState is used for updating states in CBC.
 
--when component loads first constructor is called then render method is called in case of CBC.
+-when CBC loads an instance is created and at first constructor is called then render method is called in case of CBC.
 
 -constructor->render->componentDidMount (so this is called when the component is already mounted on the DOM)
 order: parent cons, parent render, child cons, child render, child mount, parent mount
@@ -103,4 +103,4 @@ parent render
 parent didmount
 
 -react has 2 phases: render(called constructor then render),commit(called component did mount)
-for optimization purpose react batched the render phase of child components. in commit phase DOM manipulation occurs. DOM is the very expensive task so react tries to batch up the DOM manipulation phase so it will optimises the performance of our app.
+for optimization purpose react batched the render and commit phase of child components. in commit phase DOM manipulation occurs. DOM is the very expensive task so react tries to batch up the DOM manipulation phase so it will optimises the performance of our app.
