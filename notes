@@ -104,3 +104,28 @@ parent didmount
 
 -react has 2 phases: render(called constructor then render),commit(called component did mount)
 for optimization purpose react batched the render and commit phase of child components. in commit phase DOM manipulation occurs. DOM is the very expensive task so react tries to batch up the DOM manipulation phase so it will optimises the performance of our app.
+
+-Mounting
+constructor
+render
+    html with dummy data
+component did mount
+    api call
+    this.setState -> state variable is updated
+
+Updating
+render(api data)
+    html (new api data)
+component did update
+
+-componentDidUpdate is called after component get mounted onto the dom. componentWillUnmount(suppose navigating to different link mean unmount the current one) is called just before component unmounted.
+componentDidMount = useEffect with []
+componentDidUpdate = useEffect with some dependency
+
+-we cannot use async inside useEffect callback function bcz it always expect a cleanup function or nothing but not a promise
+A cleanup function is a function returned by your useEffect that React will call:
+before the component unmounts, or
+before running the effect again (if dependencies change)
+
+instead we can do this:
+useEffect(() => { asyncFn(); }, [])

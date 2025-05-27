@@ -16,6 +16,14 @@ class UserClass extends React.Component{ //extends React.Component will make rea
         }
     }
     async componentDidMount(){
+        // setInterval(()=>{
+        //     console.log("hello")
+        // },1000)  //not good as it will call every second regardless of any page.
+
+        this.timer=setInterval(()=>{
+            console.log("hello")
+        },1000)
+        
         console.log(this.props.name+"child CDM")
         const data=await fetch("https://fakestoreapi.com/users/1")
         const json=await data.json()
@@ -23,6 +31,17 @@ class UserClass extends React.Component{ //extends React.Component will make rea
         this.setState({
             data:json
         })
+    }
+    componentDidUpdate(prevProps,prevState){
+        //useeffect with some dependency
+        if(this.state.count !== prevState.count){
+
+        }
+        console.log("component did update")
+    }
+    componentWillUnmount(){
+        clearInterval(this.timer)
+        console.log("component will mount")
     }
 render(){
     console.log(this.props.name+"child render")
