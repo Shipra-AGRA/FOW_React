@@ -130,6 +130,8 @@ before running the effect again (if dependencies change)
 instead we can do this:
 useEffect(() => { asyncFn(); }, [])
 
-code splitting/chunking/dynamic bundling/lazy loading/on demand loading
+-code splitting/chunking/dynamic bundling/lazy loading/on demand loading
 inside dist folder there will be one js file that contains all the components code in just one file. but there might be certain issues if we have a large application as the size of the file increases. so we do lazy loading so that component will not load initially it will be loaded only when goes to that page for this seperate js file will be created. to do this we need to use lazy() function. we can check this js file inside network tab > beside fetch/XHR there is a JS there we can see js file.
 even though new js file is created we still get the error page this is bcz when we click on specific link to render particular component, it took some time but react doesn't wait so it throws an error to fix this we need to use Suspense component. we need to wrap our lazy loaded component within this.
+
+-talwind css uses post css for transforming css with javascript.
