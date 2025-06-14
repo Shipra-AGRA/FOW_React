@@ -8,6 +8,7 @@ import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
 import RestaurantMenuCopy from './components/RestaurantMenuCopy';
 import { lazy, Suspense } from 'react';
+import HeaderCopyTalwind from './components/HeaderCopyTalwind';
 // import Grocery from './components/Grocery';
 
 
@@ -15,7 +16,8 @@ const Grocery=lazy(()=>{return import("./components/Grocery")})
 const AppLayout = () => {
     return (
         <div className="app">
-            <Header />
+            {/* <Header /> */}
+            <HeaderCopyTalwind/>
             <Outlet/>
         </div>
     )
