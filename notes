@@ -153,3 +153,4 @@ module.exports = {
   plugins: [],
 }
 
+-higher order component is a function that takes a component and returns a component.
