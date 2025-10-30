@@ -87,6 +87,11 @@ this.setState is used for updating states in CBC.
 
 -when CBC loads an instance is created and at first constructor is called then render method is called in case of CBC.
 
+-cbc and fbc:
+way of creating and returning jsx
+way of passing and receiving props
+way of creating and updating states
+
 -constructor->render->componentDidMount (so this is called when the component is already mounted on the DOM)
 order: parent cons, parent render, child cons, child render, child mount, parent mount
 componentDidMount is use to make api calls.
@@ -102,7 +107,7 @@ parent render
     child2 didmount
 parent didmount
 
--react has 2 phases: render(called constructor then render),commit(called component did mount)
+-react lifecycle has 2 phases: render(called constructor then render),commit(called component did mount)
 for optimization purpose react batched the render and commit phase of child components. in commit phase DOM manipulation occurs. DOM is the very expensive task so react tries to batch up the DOM manipulation phase so it will optimises the performance of our app.
 
 -Mounting

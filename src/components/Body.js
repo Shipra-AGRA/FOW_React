@@ -25,6 +25,7 @@ const Body = () => {
     const [filteredRestaurant,setFilteredRestaurant]=useState([])
 
     const onlineStatus=useOnlineStatus()
+    console.log("onlineStatus",onlineStatus)
     if(onlineStatus === false) return <h1>Looks like you are offline!! Please check your internet connection.</h1>
 
     return ListOfRestaurant.length===0?<Shimmer/>:(
