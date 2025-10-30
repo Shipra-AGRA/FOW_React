@@ -4,19 +4,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"parcel index.html"
+    "dev": "parcel index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.8",
+    "@tailwindcss/postcss": "^4.1.16",
     "autoprefixer": "^10.4.21",
     "parcel": "^2.13.3",
     "postcss": "^8.5.4",
     "process": "^0.11.10",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4.1.16"
   },
   "dependencies": {
     "react": "^18.3.1",
