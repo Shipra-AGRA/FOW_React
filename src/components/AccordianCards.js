@@ -5,6 +5,8 @@ import AccordianData from "./AccordianData"
 
 const AccordianCards=()=>{
     const [data,setData]=useState(null)
+    const [accIndex,setAccIndex]=useState(null)
+    
     useEffect(()=>{
         fetchData()
     },[])
@@ -20,7 +22,7 @@ return(
     <>
     {
         data?.map((d,index)=>(
-            <AccordianData data={d?.card?.card}/>
+            <AccordianData data={d?.card?.card} accIndex={index===accIndex?true:false} setAccIndex={()=>{setAccIndex(index)}}/>
         ))
     }
     </>
