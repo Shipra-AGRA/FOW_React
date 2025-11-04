@@ -172,3 +172,5 @@ const card=({ind,setInd})=>{
     <Body></Body>
     </div>
 }
+
+- if a component controls itself then it will be an uncontrolled component but if the parent controls states of the child component then it will be an controlled component.

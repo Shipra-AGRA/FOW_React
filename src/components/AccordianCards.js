@@ -17,12 +17,16 @@ const AccordianCards=()=>{
         const filterData=restroData.filter((d)=>(d?.card?.card?.['@type']==="type.googleapis.com/swiggy.presentation.food.v2.Restaurant"))
         setData(filterData)
     }
+
+    const handleClick=(index)=>{
+        accIndex===index?setAccIndex(null):setAccIndex(index)
+    }
     
 return(
     <>
     {
         data?.map((d,index)=>(
-            <AccordianData data={d?.card?.card} accIndex={index===accIndex?true:false} setAccIndex={()=>{setAccIndex(index)}}/>
+            <AccordianData data={d?.card?.card} accIndex={index===accIndex?true:false} setAccIndex={()=>{handleClick(index)}}/>
         ))
     }
     </>
