@@ -159,3 +159,16 @@ module.exports = {
 }
 
 -higher order component is a function that takes a component and returns a component.
+
+-if i want accordian functionality
+const [accIndex,setAccIndex]=useState(null)
+{
+    menus.map((m,index)=>return <card ind={accIndex==index?true:false} setInd={()=>{setAccIndex(index)}}>)
+}
+
+const card=({ind,setInd})=>{
+    ind && <div>
+    <Header onClick={setInd()}></Header>
+    <Body></Body>
+    </div>
+}

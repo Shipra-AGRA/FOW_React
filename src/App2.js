@@ -9,6 +9,7 @@ import RestaurantMenu from './components/RestaurantMenu';
 import RestaurantMenuCopy from './components/RestaurantMenuCopy';
 import { lazy, Suspense } from 'react';
 import HeaderCopyTalwind from './components/HeaderCopyTalwind';
+import AccordianCards from './components/AccordianCards';
 // import Grocery from './components/Grocery';
 
 
@@ -49,6 +50,10 @@ const appRouter2=createBrowserRouter([{
             path:"/grocery",
             // element:<Grocery/>
             element:(<Suspense fallback={<h2>Loading...</h2>}><Grocery/></Suspense>)
+        },
+        {
+            path:"/AccordianCards",
+            element:<AccordianCards/>
         }
     ],
     errorElement:<Error/>
