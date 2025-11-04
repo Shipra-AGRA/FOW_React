@@ -7,20 +7,36 @@ import Contact from './components/Contact';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
 import RestaurantMenuCopy from './components/RestaurantMenuCopy';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect, useState } from 'react';
 import HeaderCopyTalwind from './components/HeaderCopyTalwind';
 import AccordianCards from './components/AccordianCards';
+import UserContext from './utils/UserContext';
 // import Grocery from './components/Grocery';
 
 
 const Grocery=lazy(()=>{return import("./components/Grocery")})
 const AppLayout = () => {
+    //consider authentication happening here, we fetch user details and store them in a state variable
+    const [userName,setUserName]=useState("")
+
+    useEffect(()=>{
+        const data={
+            name:"shipra Ag."
+        };
+        setUserName(data.name)
+    },[])
+
     return (
-        <div className="app">
-            {/* <Header /> */}
-            <HeaderCopyTalwind/>
+        <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
+            <div className="app">
+                {/* <UserContext.Provider value={{loggedInUser:"Header"}}> */}
+                    <Header />
+                {/* </UserContext.Provider> */}
+            {/* <HeaderCopyTalwind/> */}
             <Outlet/>
         </div>
+        </UserContext.Provider>
+        
     )
 }
 

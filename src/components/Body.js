@@ -1,16 +1,20 @@
 import RestaurantCard from "./RestaurantCard"
 import resObj from "../utils/mockData"
-import React, { useEffect } from "react"
+import React, { useContext, useEffect } from "react"
 import { useState } from "react"
 import Shimmer from "./Shimmer"
 import { Link } from "react-router-dom"
 import useOnlineStatus from "../utils/useOnlineStatus"
+import UserContext from "../utils/UserContext.js"
 
 const Body = () => {
 
     useEffect(()=>{
         fetchData();
     },[])
+
+    const {loggedInUser,setUserName}=useContext(UserContext)
+    console.log("userContext@@",loggedInUser)
 
     const fetchData=async()=>{
         const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.57590&lng=77.33450&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")
@@ -47,6 +51,9 @@ const Body = () => {
                     const filteredList=ListOfRestaurant.filter((res)=>res.info.avgRating>4.3)
                     setFilteredRestaurant(filteredList)
                 }}>Top Rated Restaurant</button>
+                <div>
+                    <input className="border p-3" onChange={(e)=>{setUserName(e.target.value)}} value={loggedInUser}/>
+                </div>
             </div>
             <div className='res-container'>
                 {
