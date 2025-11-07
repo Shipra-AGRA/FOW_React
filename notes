@@ -174,3 +174,10 @@ const card=({ind,setInd})=>{
 }
 
 - if a component controls itself then it will be an uncontrolled component but if the parent controls states of the child component then it will be an controlled component.
+
+-redux
+1. store is a single source of truth. it is centralised entity where state is managed.
+2. action is an object that contains event or combination of event+info(can be some payload)
+3. slice- all the features are managed by slice. for every feature we creates slice. it contains initial state and reducer functions.
+4. reducer are the functions where the logic of data updation is written.
+5. selector is used to fetch state from store.
