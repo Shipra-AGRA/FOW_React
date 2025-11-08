@@ -181,3 +181,4 @@ const card=({ind,setInd})=>{
 3. slice- all the features are managed by slice. for every feature we creates slice. it contains initial state and reducer functions.
 4. reducer are the functions where the logic of data updation is written.
 5. selector is used to fetch state from store.
+steps:create store, provide that store to our app, create slice, register reducer in store, make actions to dispatch, use value using useSelector
