@@ -19,6 +19,7 @@ return(
             <span className="font-bold text-lg">{data.info.name}</span>
         <span>⬇️</span>
         </div>
+        
         {/* {!hide && <AccordianBody data={data}/>} */}
        { accIndex && <AccordianBody data={data}/>}
         </div>
