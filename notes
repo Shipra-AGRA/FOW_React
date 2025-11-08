@@ -183,3 +183,8 @@ const card=({ind,setInd})=>{
 5. selector is used to fetch state from store.
 steps:create store, provide that store to our app, create slice, register reducer in store, make actions to dispatch, use value using useSelector
 subscribe the store-in sync with the store (the component is subscribed to the store or in sync with the store)
+
+-testing(by developer)
+1. unit testing
+2. integration testing
+3. end to end testing

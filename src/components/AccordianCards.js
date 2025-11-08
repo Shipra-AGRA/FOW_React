@@ -26,7 +26,7 @@ return(
     <>
     {
         data?.map((d,index)=>(
-            <AccordianData data={d?.card?.card} accIndex={index===accIndex?true:false} setAccIndex={()=>{handleClick(index)}}/>
+            <AccordianData key={index} data={d?.card?.card} accIndex={index===accIndex?true:false} setAccIndex={()=>{handleClick(index)}}/>
         ))
     }
     </>

@@ -11,6 +11,9 @@ import { lazy, Suspense, useEffect, useState } from 'react';
 import HeaderCopyTalwind from './components/HeaderCopyTalwind';
 import AccordianCards from './components/AccordianCards';
 import UserContext from './utils/UserContext';
+import { Provider } from 'react-redux';
+import appStore from './utils/appStore';
+import Cart from './components/Cart';
 // import Grocery from './components/Grocery';
 
 
@@ -27,7 +30,8 @@ const AppLayout = () => {
     },[])
 
     return (
-        <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
+        <Provider store={appStore}>
+            <UserContext.Provider value={{loggedInUser:userName,setUserName}}>
             <div className="app">
                 {/* <UserContext.Provider value={{loggedInUser:"Header"}}> */}
                     <Header />
@@ -36,6 +40,7 @@ const AppLayout = () => {
             <Outlet/>
         </div>
         </UserContext.Provider>
+        </Provider>
         
     )
 }
@@ -70,6 +75,10 @@ const appRouter2=createBrowserRouter([{
         {
             path:"/AccordianCards",
             element:<AccordianCards/>
+        },
+        {
+            path:"/cart",
+            element:<Cart/>
         }
     ],
     errorElement:<Error/>
