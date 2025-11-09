@@ -188,3 +188,10 @@ subscribe the store-in sync with the store (the component is subscribed to the s
 1. unit testing
 2. integration testing
 3. end to end testing
+
+steps:
+-installed react testing library
+-installed jest
+-installed babel dependencies
+-configure babel
+-configure  parcel config file to disable default babel transpilation
